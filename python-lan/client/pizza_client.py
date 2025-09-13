@@ -4,7 +4,7 @@ import threading
 HOST = "127.0.0.1"
 PORT = 7645
 
-foods = ["Pizza", "Rice", "Paneer", "Potato"]
+item_cart = ["Pizza", "Rice", "Paneer", "Potato"]
 threads = []
 
 
@@ -18,7 +18,7 @@ def request_food(food: str):
 
 
 def request_cart():
-    for food in foods:
+    for food in item_cart:
         t = threading.Thread(target=request_food, args=(food,))
         threads.append(t)
 
