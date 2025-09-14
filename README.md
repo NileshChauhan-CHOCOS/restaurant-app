@@ -14,28 +14,48 @@ Python – simple socket client using Python’s socket module.<br>
 C++ – client using <sys/socket.h> APIs.
 
 
-## 🚀 How to Run
-### server
+
+## 🚀Run Locally
+
+Clone the project
+
+```bash
+  https://github.com/NileshChauhan-CHOCOS/restaurant-app.git
 ```
-cd java-lan/
+
+Go to the project directory
+
+```bash
+    cd restaurant-app/
 ```
+### Server
+Go to root directory of server
+```bash
+    cd java-lan/
 ```
+Install dependencies
+
+```bash
+   mvn clean install
+```
+Compile server
+```bash
 mvn compile
 ```
-<img src="docs/server_compile.png" alt="Server Compile" width="500"/>
-
-```
+Start the Server
+```bash
 mvn exec:java -Dexec.mainClass="mvn exec:java -Dexec.mainClass="org.restaurant.RestaurantApplication"
 ```
-<img src="docs/server_compile.png" alt="Server Run" width="500"/>
 
-### client
-####  Python
+### Client
+#### python
+Go to root directory of client
+```bash
+    cd python-lan/
 ```
-$ cd python-lan/
+Start client
+```bash
+    python client/pizza_client.py
 ```
-```
-$ python client/pizza_client.py
-```
-<img src="docs/server_compile.png" alt="Python client Run" width="500"/>
+
 
