@@ -5,6 +5,7 @@ It is designed for learning purposes to show how socket programming concepts are
 ## Badges
 [![Socket Doc](https://img.shields.io/badge/socket-documentation-blue?logo=python)](https://realpython.com/python-sockets/)
 ![Maven](https://img.shields.io/badge/Built%20with-Maven-C71A36?logo=apachemaven&logoColor=white)
+[![Multithreading Python](https://img.shields.io/badge/multithreading-documentation-blue?logo=python)](https://docs.python.org/3/library/threading.html)
 
 ## 📂 Project Structure
 ### java-lan
