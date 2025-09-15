@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
     if (connect(sockfd, (struct sockaddr*)&serv_addr, sizeof(serv_addr)) < 0)
         error("ERROR connecting");
 
-    cout << "Please enter the message: ";
+    cout << "Please enter the message: \u001B[34m";
     char buffer[256];
     memset(buffer, 0, sizeof(buffer));
     cin.getline(buffer, 255);
@@ -64,7 +64,8 @@ int main(int argc, char** argv) {
     if (n == SOCKET_ERROR)
         error("ERROR reading from socket");
 
-    cout << "Server reply: " << buffer << endl;
+    cout << "\u001B[0m";
+    cout << "Server reply: \u001B[92m" << buffer << "\u001B[0m" <<endl;
 
     closesocket(sockfd);
     WSACleanup();
