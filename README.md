@@ -3,7 +3,9 @@ This project demonstrates socket programming.How a Java-based TCP server can com
 It is designed for learning purposes to show how socket programming concepts are consistent across languages.
 
 ## Badges
-[![Docs](https://img.shields.io/badge/docs-python-blue?logo=python)](https://realpython.com/python-sockets/)
+[![Socket Doc](https://img.shields.io/badge/socket-documentation-blue?logo=python)](https://realpython.com/python-sockets/)
+[![Multithreading Python](https://img.shields.io/badge/multithreading-documentation-blue?logo=python)](https://docs.python.org/3/library/threading.html)
+[![Apache Maven](https://img.shields.io/badge/Apache%20Maven-docs-C71A36?logo=apachemaven&logoColor=white)](https://maven.apache.org/install.html)
 
 ## 📂 Project Structure
 ### java-lan
@@ -14,9 +16,19 @@ Python – simple socket client using Python’s socket module.<br>
 C++ – client using <sys/socket.h> APIs.
 
 
+## 🛠 Build Instructions
+### Prerequisites
 
-## 🚀Run Locally
+Install [Java 20+](https://adoptium.net/)
 
+Install [Apache Maven](https://maven.apache.org/install.html)
+
+Verify installation
+```bash
+java -version
+mvn -version
+```
+### Build
 Clone the project
 
 ```bash
@@ -28,24 +40,28 @@ Go to the project directory
 ```bash
     cd restaurant-app/
 ```
-### Server
 Go to root directory of server
 ```bash
     cd java-lan/
 ```
-Install dependencies
+Build
 
 ```bash
    mvn clean install
 ```
+
+## 🚀Run Locally
 Compile server
 ```bash
 mvn compile
 ```
+<img src="docs/server_compile.jpg" alt="Server compile">
+
 Start the Server
 ```bash
 mvn exec:java -Dexec.mainClass="mvn exec:java -Dexec.mainClass="org.restaurant.RestaurantApplication"
 ```
+<img src="docs/server_run.jpg" alt="Server running">
 
 ### Client
 #### python
@@ -57,5 +73,23 @@ Start client
 ```bash
     python client/pizza_client.py
 ```
+<img src="docs/python_clien_run.jpg" alt="Python client Running">
 
+## 🛑 Stopping the Server
+To stop the server, simply press:
+
+**CTRL + C** in the **terminal/command** prompt where the server is running.
+
+This sends a termination signal (**SIGINT**) that gracefully **shuts down the Java process**.
+
+If the server is running in the background (e.g., with & on Linux/macOS), find and kill it:
+```bash
+ps -ef | grep RestaurantApplication   # find process
+kill -9 <PID>                         # stop server by process ID
+```
+On Windows (PowerShell / CMD):
+```bash
+tasklist | findstr java
+taskkill /F /PID <PID>
+```
 
