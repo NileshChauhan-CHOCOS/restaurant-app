@@ -93,7 +93,9 @@ RUN
 ```bash
 ./NebulaClient.exe 127.0.0.1 7645
 ```
-<img src="docs/c++_win_run.jpg" alt="C++ client running">
+<img src="docs/c++_win_run.jpg" alt="C++ client run">
+
+<img src="docs/c++_win_rs.jpg" alt="C++ client running">
 
 
 ## 🛑 Stopping the Server
