@@ -59,7 +59,7 @@ mvn compile
 
 Start the Server
 ```bash
-mvn exec:java -Dexec.mainClass="mvn exec:java -Dexec.mainClass="org.restaurant.RestaurantApplication"
+mvn exec:java -Dexec.mainClass="org.restaurant.RestaurantApplication"
 ```
 <img src="docs/server_run.jpg" alt="Server running">
 
@@ -74,6 +74,27 @@ Start client
     python client/pizza_client.py
 ```
 <img src="docs/python_clien_run.jpg" alt="Python client Running">
+
+#### C++
+Go to root directory of client
+```bash
+cd c++-lan/
+cd windows
+cd client
+```
+COMPILE
+```bash
+g++ NebulaClient.cpp -o NebulaClient.exe -lws2_32
+```
+
+<img src="docs/c++_win_compile.jpg" alt="C++ client compilation">
+
+RUN
+```bash
+./NebulaClient.exe 127.0.0.1 7645
+```
+<img src="docs/c++_win_run.jpg" alt="C++ client running">
+
 
 ## 🛑 Stopping the Server
 To stop the server, simply press:
